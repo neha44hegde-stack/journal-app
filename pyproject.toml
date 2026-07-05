@@ -1,0 +1,30 @@
+[project]
+name = "secure-journal"
+version = "1.0.0"
+description = "An encrypted, searchable journal app with mood analytics."
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=41.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "mypy>=1.0.0",
+    "black>=23.0.0",
+    "vaderSentiment>=3.3.2",
+]
+
+[project.scripts]
+journal = "cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true

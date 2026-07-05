@@ -1,0 +1,4 @@
+cryptography>=41.0.0
+
+# Optional, for better sentiment analysis (falls back gracefully if absent):
+# vaderSentiment>=3.3.2
